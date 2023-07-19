@@ -1,0 +1,292 @@
+{
+    "completed_at": "2023-07-19T19:35:09.391534",
+    "dependencies": {
+        "argparse": "1.4.0",
+        "biopython": "1.81",
+        "dparse": "0.6.3",
+        "gitpython": "3.1.32",
+        "rich": "13.4.2",
+        "toml": "0.10.2"
+    },
+    "pipeline_name": "Allele pipeline",
+    "pipeline_version": "cdb4d5d5d40c05a689aae7aa4c996f05cfccabc2",
+    "repository_name": "allele_pipeline",
+    "started_at": "2023-07-19T19:35:06.830424",
+    "steps": {
+        "1": {
+            "action_log": {
+                "completed_at": null,
+                "folders_created": [],
+                "folders_in_existence": [
+                    "cytoplasmic_sequences",
+                    "gdomain_sequences",
+                    "pocket_pseudosequences",
+                    "protein_alleles",
+                    "log",
+                    "tmp"
+                ]
+            },
+            "arguments": {
+                "force": false,
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles"
+            },
+            "completed_at": "2023-07-19T19:35:06.835583",
+            "started_at": "2023-07-19T19:35:06.835554",
+            "step": "1",
+            "step_action": "create_folder_structure",
+            "substep": null
+        },
+        "2": {
+            "action_log": {
+                "h2_class_i_prot": {
+                    "cached": "2023-07-17T11:53:23.144681"
+                },
+                "ipd_imgt_hla_prot": {
+                    "cached": "2023-07-17T11:53:21.724620"
+                },
+                "ipd_mhc_prot": {
+                    "cached": "2023-07-17T11:53:22.816667"
+                }
+            },
+            "arguments": {
+                "force": false,
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles"
+            },
+            "completed_at": "2023-07-19T19:35:06.838148",
+            "started_at": "2023-07-19T19:35:06.838118",
+            "step": "2",
+            "step_action": "fetch_raw_datasets",
+            "substep": null
+        },
+        "3.1": {
+            "action_log": {
+                "alleles_found": 3059,
+                "locus": "HLA-A",
+                "sequences_processed": 7893,
+                "unique_cytoplasmic_sequences": 2784,
+                "unique_gdomain_sequences": 2265,
+                "unique_pocket_pseudosequences": 766
+            },
+            "arguments": {
+                "force": false,
+                "locus": "A",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:07.348849",
+            "started_at": "2023-07-19T19:35:06.839910",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 1
+        },
+        "3.2": {
+            "action_log": {
+                "alleles_found": 3663,
+                "locus": "HLA-B",
+                "sequences_processed": 9381,
+                "unique_cytoplasmic_sequences": 3371,
+                "unique_gdomain_sequences": 2912,
+                "unique_pocket_pseudosequences": 1354
+            },
+            "arguments": {
+                "force": false,
+                "locus": "B",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:07.923506",
+            "started_at": "2023-07-19T19:35:07.351093",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 2
+        },
+        "3.3": {
+            "action_log": {
+                "alleles_found": 2965,
+                "locus": "HLA-C",
+                "sequences_processed": 7872,
+                "unique_cytoplasmic_sequences": 2610,
+                "unique_gdomain_sequences": 2139,
+                "unique_pocket_pseudosequences": 697
+            },
+            "arguments": {
+                "force": false,
+                "locus": "C",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:08.454726",
+            "started_at": "2023-07-19T19:35:07.925736",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 3
+        },
+        "3.4": {
+            "action_log": {
+                "alleles_found": 138,
+                "locus": "HLA-E",
+                "sequences_processed": 347,
+                "unique_cytoplasmic_sequences": 123,
+                "unique_gdomain_sequences": 108,
+                "unique_pocket_pseudosequences": 15
+            },
+            "arguments": {
+                "force": false,
+                "locus": "E",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:08.640690",
+            "started_at": "2023-07-19T19:35:08.456881",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 4
+        },
+        "3.5": {
+            "action_log": {
+                "alleles_found": 12,
+                "locus": "HLA-F",
+                "sequences_processed": 60,
+                "unique_cytoplasmic_sequences": 9,
+                "unique_gdomain_sequences": 5,
+                "unique_pocket_pseudosequences": 3
+            },
+            "arguments": {
+                "force": false,
+                "locus": "F",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:08.813590",
+            "started_at": "2023-07-19T19:35:08.642752",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 5
+        },
+        "3.6": {
+            "action_log": {
+                "alleles_found": 38,
+                "locus": "HLA-G",
+                "sequences_processed": 121,
+                "unique_cytoplasmic_sequences": 36,
+                "unique_gdomain_sequences": 29,
+                "unique_pocket_pseudosequences": 5
+            },
+            "arguments": {
+                "force": false,
+                "locus": "G",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_IMGT_HLA_PROT",
+                "species_slug": "hla"
+            },
+            "completed_at": "2023-07-19T19:35:08.989672",
+            "started_at": "2023-07-19T19:35:08.815711",
+            "step": "3",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 6
+        },
+        "4": {
+            "action_log": {
+                "all_class_i_allele_sequences_count": 5876,
+                "all_sequences_count": 11727,
+                "loci_found": 242,
+                "species_found": 43,
+                "unique_class_i_alleles_found": 4753,
+                "unmatched_count": 1389
+            },
+            "arguments": {
+                "force": false,
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "IPD_MHC_PROT"
+            },
+            "completed_at": "2023-07-19T19:35:09.378210",
+            "started_at": "2023-07-19T19:35:08.991864",
+            "step": "4",
+            "step_action": "construct_class_i_bulk_allele_lists",
+            "substep": null
+        },
+        "5.1": {
+            "action_log": {
+                "alleles_found": 5,
+                "locus": "H2-K",
+                "sequences_processed": 5,
+                "unique_cytoplasmic_sequences": 5,
+                "unique_gdomain_sequences": 5,
+                "unique_pocket_pseudosequences": 5
+            },
+            "arguments": {
+                "force": false,
+                "locus": "K",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "H2_CLASS_I_PROT",
+                "species_slug": "h2"
+            },
+            "completed_at": "2023-07-19T19:35:09.381391",
+            "started_at": "2023-07-19T19:35:09.380432",
+            "step": "5",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 1
+        },
+        "5.2": {
+            "action_log": {
+                "alleles_found": 4,
+                "locus": "H2-D",
+                "sequences_processed": 4,
+                "unique_cytoplasmic_sequences": 4,
+                "unique_gdomain_sequences": 4,
+                "unique_pocket_pseudosequences": 4
+            },
+            "arguments": {
+                "force": false,
+                "locus": "D",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "H2_CLASS_I_PROT",
+                "species_slug": "h2"
+            },
+            "completed_at": "2023-07-19T19:35:09.384070",
+            "started_at": "2023-07-19T19:35:09.383428",
+            "step": "5",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 2
+        },
+        "5.3": {
+            "action_log": {
+                "alleles_found": 1,
+                "locus": "H2-L",
+                "sequences_processed": 1,
+                "unique_cytoplasmic_sequences": 1,
+                "unique_gdomain_sequences": 1,
+                "unique_pocket_pseudosequences": 1
+            },
+            "arguments": {
+                "force": false,
+                "locus": "L",
+                "log_path": "/media/chris/data/warehouse/logs/alleles",
+                "output_path": "/media/chris/data/warehouse/alleles",
+                "sequence_set": "H2_CLASS_I_PROT",
+                "species_slug": "h2"
+            },
+            "completed_at": "2023-07-19T19:35:09.386449",
+            "started_at": "2023-07-19T19:35:09.386046",
+            "step": "5",
+            "step_action": "construct_class_i_locus_allele_lists",
+            "substep": 3
+        }
+    }
+}
