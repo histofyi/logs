@@ -1,0 +1,72 @@
+{
+    "completed_at": "2023-08-10T14:35:49.152779",
+    "datehash": "20230810143540",
+    "dependencies": {
+        "pipenv": {
+            "dparse": "0.6.3",
+            "gitpython": "3.1.32",
+            "requests": "2.31.0",
+            "rich": "13.5.2",
+            "toml": "0.10.2"
+        }
+    },
+    "pipeline_name": "Motif pipeline",
+    "pipeline_version": "cd117f632a44fd52310f366cdd701adc65ddf4a8",
+    "repository_name": "motif_pipeline",
+    "started_at": "2023-08-10T14:35:40.278293",
+    "steps": {
+        "0": {
+            "action_output": {
+                "completed_at": null,
+                "folders_created": [],
+                "folders_in_existence": [
+                    "input",
+                    "output",
+                    "tmp",
+                    "log"
+                ]
+            },
+            "arguments": null,
+            "completed_at": "2023-08-10T14:35:40.287392",
+            "started_at": "2023-08-10T14:35:40.278293",
+            "step": 0,
+            "step_action": "create_base_folder_structure",
+            "substep_number": null
+        },
+        "1": {
+            "action_output": {
+                "error": null,
+                "file_length": 6728742,
+                "file_path": "/home/chris/science/code/pipelines//motif_pipeline/tmp/atlas_class_i_all_peptides.txt",
+                "http_status_code": 200
+            },
+            "arguments": null,
+            "completed_at": "2023-08-10T14:35:41.591574",
+            "started_at": "2023-08-10T14:35:40.288680",
+            "step": "1",
+            "step_action": "download_class_i_motif_data",
+            "substep_number": null
+        },
+        "2": {
+            "action_output": {
+                "allele_count": 127,
+                "lines_processed": 408808,
+                "peptide_count": 261839
+            },
+            "arguments": null,
+            "completed_at": "2023-08-10T14:35:49.147903",
+            "started_at": "2023-08-10T14:35:41.591592",
+            "step": "2",
+            "step_action": "process_class_i_motif_data",
+            "substep_number": null
+        }
+    },
+    "system_info": {
+        "architecture": "x86_64",
+        "hostname": "sette",
+        "platform": "Linux",
+        "platform-release": "6.2.6-76060206-generic",
+        "platform-version": "#202303130630~1689015125~22.04~ab2190e SMP PREEMPT_DYNAMIC Mon J",
+        "processor": "x86_64"
+    }
+}
